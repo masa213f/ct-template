@@ -1,0 +1,12 @@
+[Unit]
+Description=Oneshot service sample
+
+[Service]
+Type=oneshot
+ExecStart=/opt/sbin/touch-tmp
+RemainAfterExit=yes
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target
